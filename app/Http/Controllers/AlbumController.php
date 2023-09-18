@@ -32,6 +32,7 @@ class AlbumController extends Controller
             'artist_id' => 'required|integer',
             'publication_date' => 'required|date',
             'numberOfSongs' => 'required|integer',
+            'urlPicture' => 'string',
         ]);
         
         if ($validator->fails()) {
@@ -44,7 +45,8 @@ class AlbumController extends Controller
                 'name' => $request->name,
                 'artist_id' => $request->artist_id,
                 'publication_date' => $request->publication_date,
-                'numberOfSongs' => $request->numberOfSongs
+                'numberOfSongs' => $request->numberOfSongs,
+                'urlPicture' => $request->urlPicture
             ]);
 
             if ($album) {
@@ -84,6 +86,7 @@ class AlbumController extends Controller
             'artist_id' => 'required|integer',
             'publication_date' => 'required|date',
             'numberOfSongs' => 'required|integer',
+            'urlPicture' => 'string',
         ]);
 
         if ($validator->fails()) {
@@ -100,7 +103,8 @@ class AlbumController extends Controller
                     'name' => $request->name,
                     'artist_id' => $request->artist_id,
                     'publication_date' => $request->publication_date,
-                    'numberOfSongs' => $request->numberOfSongs
+                    'numberOfSongs' => $request->numberOfSongs,
+                    'urlPicture' => $request->urlPicture
                 ]);
 
                 return response()->json([

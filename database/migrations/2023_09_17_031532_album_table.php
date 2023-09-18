@@ -17,7 +17,6 @@ return new class extends Migration
             $table->foreignId('artist_id');
             $table->date('publication_date');
             $table->integer('numberOfSongs');
-
             $table->foreign('artist_id')->references('id')->on('artist');
         });
     }

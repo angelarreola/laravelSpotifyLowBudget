@@ -16,6 +16,7 @@ class Album extends Model
         'name',
         'artist_id',
         'publication_date',
-        'numberOfSongs'
+        'numberOfSongs',
+        'urlPicture',
     ];
 }
